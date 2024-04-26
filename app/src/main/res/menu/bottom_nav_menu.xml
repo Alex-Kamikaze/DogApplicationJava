@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:title="Случанйное фото"
+        android:id="@+id/randomDogFragment"
+        android:icon="@drawable/random_image_icon" />
+    <item
+        android:title="Сохраненное"
+        android:icon="@drawable/saved_images_icon"
+        android:id="@+id/savedDogImagesFragment" />
+</menu>

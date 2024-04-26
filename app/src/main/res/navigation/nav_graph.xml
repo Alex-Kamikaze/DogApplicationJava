@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/randomDogFragment">
+
+    <fragment
+        android:id="@+id/randomDogFragment"
+        android:name="com.example.dogapplication.ui.fragments.RandomDogFragment"
+        android:label="fragment_random_dog"
+        tools:layout="@layout/fragment_random_dog" />
+    <fragment
+        android:id="@+id/savedDogImagesFragment"
+        android:name="com.example.dogapplication.ui.fragments.SavedDogImagesFragment"
+        android:label="fragment_saved_dog_images"
+        tools:layout="@layout/fragment_saved_dog_images" >
+        <action
+            android:id="@+id/action_savedDogImagesFragment_to_dogGalleryFragment"
+            app:destination="@id/dogGalleryFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dogGalleryFragment"
+        android:name="com.example.dogapplication.ui.fragments.DogGalleryFragment"
+        android:label="DogGalleryFragment" >
+        <argument
+            android:name="currentDogImagePosition"
+            app:argType="integer" />
+    </fragment>
+</navigation>
